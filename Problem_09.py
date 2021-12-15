@@ -10,17 +10,17 @@ b = 2
 c = 100
 solved = False
 print("a = ", a, " b = ", b, " c = ", c)
-for a in range(1000):
-	print("a = ", a, " b = ", b, " c = ", c)
-	for b in range(1000):
-		for c in range(1000):
+for a in range(1, 1000):
+	for b in range(1, 1000):
+		for c in range(1, 1000):
 			if a < b < c:
-				if a + b == 1000:
-					solved = True
-					break
+				if a + b + c == 1000:
+					if a**2 + b**2 == c**2:
+						solved = True
+						break
 		if solved:
 			break
 	if solved:
 		break
-product = a*b*100
-print("The sum of only triplet who exists is : ", product)
+product = a*b*c
+print("The product of only triplet who exists is : ", product)
